@@ -1,11 +1,13 @@
 import keyboard
 import string
 
+GENERATE_TEXT_SHORTCUT = "ctrl+alt+space"
+
 
 def get_text():
     keys: list[keyboard.KeyboardEvent] = []
     keyboard.hook(keys.append)
-    keyboard.wait("esc")
+    keyboard.wait(GENERATE_TEXT_SHORTCUT)
     keyboard.unhook_all()
 
     res = ""
