@@ -1,6 +1,8 @@
 import keyboard
 import string
 
+from api import generate_text
+
 GENERATE_TEXT_SHORTCUT = "ctrl+alt+space"
 
 
@@ -29,7 +31,8 @@ def get_text():
 def main():
     # listen for keyboard input and store it in a list
     res = get_text()
-    print(res)
+    generated_text = generate_text(res)
+    print(generated_text)
 
 
 if __name__ == "__main__":
