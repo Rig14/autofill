@@ -28,11 +28,15 @@ def get_text():
     return res
 
 
+def type_text(text: str) -> None:
+    keyboard.write(text)
+
+
 def main():
     # listen for keyboard input and store it in a list
     res = get_text()
     generated_text = generate_text(res)
-    print(generated_text)
+    type_text(generated_text)
 
 
 if __name__ == "__main__":
